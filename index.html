@@ -1,0 +1,199 @@
+<html>
+<head>
+    <title>Calabash Lifestyle</title>
+    <link href="Style.css" rel="stylesheet">
+    <style>
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .header {
+            background-color: #fefefe;
+            color: #000000;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+        .header img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .header h1 {
+            margin: 10px 0;
+        }
+        .header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+
+        #countdown {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        .circle {
+            background-color: #000000;
+            color: white;
+            border-radius: 50%;
+            width: 110px;
+            height: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            margin: 0 10px;
+        }
+
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #000000;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .button-container a:hover {
+            background-color: #ca3434;
+        }
+
+
+        #email-field {
+            margin-top: 20px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 300px;
+            margin-top: 20px;
+        }
+        #social-media {
+            margin-top: 20px;
+        }
+        #social-media img {
+            width: 40px;
+            margin: 0 10px;
+        }
+
+        .back-button a:hover {
+            background-color: #ca3434;
+        }
+        
+        .footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+
+        }
+
+
+        #copyright {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #999;
+        }
+
+    </style>
+</head>
+<body>
+    
+<div id="splash-screen">
+    <h1>Loading Calabash Lifestyle</h1>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <p id="loading-text">0%</p>
+</div>
+    <div class="header">
+        <img src="img/cropped-Calabash_logo.jpg" alt="Calabash Logo" width="200" height="200">
+        <h1>Welcome to Calabash Lifestyle</h1>
+        <h2>"Where Good Friends Meet"</h2>
+    </div>
+    <div class="button-container">
+        <a href="index.html" class="home">Home</a>
+        <a href="Products.html" class="products">Products</a>
+        <a href="News.html" class="news">News</a>
+        <a href="Contact Us.html" class="contact">Contact Us</a>
+        <a href="About Us.html" class="about">About Us</a>
+    </div>
+    <div id="countdown">
+        <div class="circle" id="days"></div>
+        <div class="circle" id="hours"></div>
+        <div class="circle" id="minutes"></div>
+        <div class="circle" id="seconds"></div>
+    </div>
+    <h2>GRAND OPENING OF CALABASH LIFESTYLE.</h2>
+    <a><p><h2>Date: 25 December 2024</h2></p></a>
+    <a><p><h2>Location: 97 Ntsima, Ga-Dikgale, Mankweng</h2></p></a>
+    <a><p><h2>Time: 16:00-02:00</h2></p></a>
+    <a><p><h2>Join us for the official grand opening of Calabash Lifestyle,</h2></p></a>
+    <a><p><h2>where good friends meet! Come experience a unique lifestyle </h2></p></a>
+    <a><p><h2>space full of good vibes, great food, and enternment.</h2></p></a>
+    <a><p><h2>*Live music.</h2></p></a>
+    <a><p><h2>*Good food and drinks.</h2></p></a>
+    <a><p><h2>*Grand opening offers.</h2></p></a>
+    
+    
+    <h3></h3>
+    
+    <div id="social-media">
+        <a href="https://www.facebook.com/profile.php?id=61555978071879&mibextid=LQQJ4d" target="_blank"><img src="img/facebook.jfif" alt="Facebook"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="img/twitter.jfif" alt="Twitter"></a>
+        <a href="thecalabashlifestyle@gmail.com" target="_blank"><img src="img/mail.jfif" alt="Gmail"></a>
+        <a href="https://www.instagram.com/the_calabash_lifestyle?igsh=ODJtZmR3c3k2bmg0" target="_blank"><img src="img/instagram.jfif" alt="Instagram"></a>
+    </div>
+
+    <script>
+        var countDownDate = new Date("Dec 25, 2024 23:59:59").getTime();
+
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days + "d";
+            document.getElementById("hours").innerHTML = hours + "h";
+            document.getElementById("minutes").innerHTML = minutes + "m";
+            document.getElementById("seconds").innerHTML = seconds + "s";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+    <div class="footer">
+        <h4>&copy; 2024 THE CALABASH LIFESTYLE. All rights reserved.</h4>
+    </div>
+
+
+</body>
+</html>
